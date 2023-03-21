@@ -1,0 +1,26 @@
+type = "checkout_ui_extension"
+name = "upsell-product"
+
+extension_points = [
+  'Checkout::Dynamic::Render'
+]
+
+# [[metafields]]
+# namespace = "my-namespace"
+# key = "my-key"
+
+# [[metafields]]
+# namespace = "my-namespace"
+# key = "my-key-2"
+
+[capabilities]
+network_access = true
+api_access = true
+
+# Read more on extension settings at https://shopify.dev/api/checkout-extensions/checkout/configuration
+# [settings]
+   [[settings.fields]]
+   key = "product_id"
+   type = "single_line_text_field"
+   name = "Enter Product Id"
+   description = "Enter Product Id"

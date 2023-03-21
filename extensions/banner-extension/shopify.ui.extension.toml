@@ -1,0 +1,32 @@
+type = "checkout_ui_extension"
+name = "banner-extension"
+
+extension_points = [
+  'Checkout::Dynamic::Render'
+]
+
+# [[metafields]]
+# namespace = "my-namespace"
+# key = "my-key"
+
+# [[metafields]]
+# namespace = "my-namespace"
+# key = "my-key-2"
+
+#Read more on extension settings at https://shopify.dev/api/checkout-extensions/checkout/configuration
+[settings]
+  [[settings.fields]]
+    key = "banner_title"
+    type = "single_line_text_field"
+    name = "Banner title"
+    description = "Enter a title for the banner"
+  [[settings.fields]]
+    key = "banner_description"
+    type = "single_line_text_field"
+    name = "Banner Text"
+    description = "Enter a description for the banner"
+  [[settings.fields]]
+    key = "banner_status"
+    type = "single_line_text_field"
+    name = "Banner Status"
+    description = "Enter a status for the banner (it should be 'info' | 'success' | 'warning' | 'critical')"
